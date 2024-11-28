@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex011</title>
+</head>
+<body>
+    
+    <h1>48) Crie um algoritmo que converte uma temperatura dada em graus Celsius para
+        Fahrenheit. O programa deve pedir ao usuário que insira a temperatura em Celsius e
+        mostrar o resultado da conversão.
+        </h1>
+    <input type="number" name="txtC" id="txtC" placeholder="°C">
+    <input type="button" value="converter" onclick="converter()">
+    <p><strong>Resposta: </strong><span id="resultado"></span></p>
+
+    <script>
+        function converter(){
+            let C = (document.getElementById('txtC').value)
+            let res = Number(C * 1.8 + 32)
+            
+            document.getElementById('resultado').textContent = res
+        }
+    </script>
+</body>
+</html>

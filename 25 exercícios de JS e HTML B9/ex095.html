@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex023</title>
+</head>
+<body>
+    
+    <h1>95) Crie um programa que leia o número de dias trabalhados em um mês e mostre o salário
+        de um funcionário, sabendo que ele trabalha 8 horas por dia e ganha R$25 por hora
+        trabalhada.</h1>
+
+    <input type="number" name="txtDias" id="txtDias" placeholder="Dias trabalhados">
+    <input type="button" value="calcular salário" onclick="calcular()">
+    <p><strong>Resposta: </strong><span id="resposta"></span></p>
+
+    <script>
+        function calcular(){
+            let dias = Number(document.getElementById('txtDias').value)
+            let salario = dias * 8 * 25
+            document.getElementById('resposta').textContent = `Salário será ${salario.toFixed(2)}`
+        } 
+    </script>
+</body>
+</html>

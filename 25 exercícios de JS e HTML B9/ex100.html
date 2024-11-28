@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex024</title>
+</head>
+<body>
+    
+    <h1>100) Faça um programa que verifique se um número é múltiplo de 3 e 5 ao mesmo
+        tempo.</h1>
+    
+    <input type="number" name="txtn1" id="txtn1" placeholder="Digite um número">
+    <input type="button" value="verificar" onclick="calcular()">
+
+    <p><strong>Resposta: </strong><span id="resposta"></span></p>
+
+    <script>
+        function calcular(){
+            let n1 = Number(document.getElementById('txtn1').value)
+            //TODO número que é divisível por 3 e 5 é divisível por 15
+            if (n1 % 3 == 0 && n1 % 5 == 0){
+                document.getElementById('resposta').textContent = `${n1} é divisível tanto por 3 quanto por 5`
+            }else{
+                document.getElementById('resposta').textContent = `${n1} NÃO é divisível por 3 e 5 ao mesmo tempo`
+            }
+        }
+    </script>
+</body>
+</html>

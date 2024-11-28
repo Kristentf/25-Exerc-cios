@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex025</title>
+</head>
+<body>
+    
+    <h1>109) Faça um programa que leia o ano de nascimento de uma pessoa, calcule a idade
+        dela e depois mostre se ela pode ou não votar.</h1>
+    <input type="number" name="txtNasc" id="txtNasc" placeholder="Ano de nascimento">
+    <input type="button" value="calcular idade" onclick="calcular()">
+    <p><strong>Resposta: </strong><span id="resposta"></span></p>
+
+    <script>
+        function calcular(){
+            let nasc = Number(document.getElementById('txtNasc').value)
+            let anoAtual = new Date().getFullYear()
+            let idade = anoAtual - nasc
+            if (idade >= 16){
+                document.getElementById('resposta').textContent = `Você tem ${idade} anos e já pode votar.`    
+            }else{
+            document.getElementById('resposta').textContent = `Você tem ${idade} anos e ainda não pode votar.`
+            }
+        }
+    </script>
+</body>
+</html>

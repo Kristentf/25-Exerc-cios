@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex012</title>
+</head>
+<body>
+    
+    <h1>51) Crie um algoritmo no JS que lê dois valores inteiros para as variáveis A e B, e então troca os valores de A por B e B por A, mostrando os valores após a troca.</h1>
+    <input type="number" name="txtA" id="txtA" placeholder="Número A">
+    <input type="number" name="txtB" id="txtB" placeholder="Número B">
+    <input type="button" value="trocar" onclick="trocar()">
+    <p><span id="resposta"></span></p>
+
+    <script>
+        function trocar(){
+            let A = Number(document.getElementById('txtA').value)
+            let B = Number(document.getElementById('txtB').value)
+            let C = Number(A)
+
+            A = B
+            B = C
+
+            document.getElementById('resposta').textContent = `Após a troca ficaria assim:`
+            document.body.innerHTML += `<strong>A = ${A} B =${B}</strong>`
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex016</title>
+</head>
+<body>
+    
+    <h1>65) Desenvolver um programa que solicita o primeiro e o último nome do usuário como
+        entradas separadas e, depois, exibe uma mensagem de boas-vindas que inclui o nome
+        completo do usuário.</h1>
+    <input type="text" name="txtNome1" id="txtNome1" placeholder="Primeiro nome">
+    <input type="text" name="txtNome2" id="txtNome2" placeholder="Segundo nome">
+    <input type="button" value="enviar" onclick="juntar()">
+    <p><strong>Resposta: </strong><span id="resposta"></span></p>
+
+    <script>
+        function juntar(){
+            let nome1 = document.getElementById('txtNome1').value
+            let nome2 = document.getElementById('txtNome2').value
+            
+            document.getElementById('resposta').textContent = `Olá, ${nome1} ${nome2}, seja bem vindo(a) a ESBAM!`
+        }
+    </script>
+</body>
+</html>

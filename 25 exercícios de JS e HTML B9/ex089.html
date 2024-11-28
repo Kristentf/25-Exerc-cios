@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex021</title>
+</head>
+<body>
+    
+    <h1>89) Faça um algoritmo que leia quanto dinheiro uma pessoa tem na carteira (em R$) e mostre
+        quantos dólares ela pode comprar.</h1>
+    
+    <input type="number" name="txtDinheiro" id="txtDinheiro" placeholder="Dinheiro da carteira">
+    <input type="button" value="calcular" onclick="calcular()">
+    <p><strong>Resposta: </strong><span id="resposta"></span></p>
+
+    <script>
+        function calcular(){
+            let Real = Number(document.getElementById('txtDinheiro').value)
+            //Dólar na cotação atual 22/11/2024 22:59 tá 5.80 reais
+            let Dolar = 5.8
+            let res = Real / Dolar
+            document.getElementById('resposta').textContent = `Com ${Real.toFixed(2)} reais é possível comprar ${res.toFixed(2)} dólares`
+        }
+    </script>
+</body>
+</html>

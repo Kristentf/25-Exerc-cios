@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex014</title>
+</head>
+<body>
+    
+    <h1>54) Desenvolva um algoritmo que calcula e mostra o perímetro de um 
+        retângulo a partir de sua largura e altura fornecidas pelo usuário.</h1>
+
+    <input type="number" name="txtAltura" id="txtAltura" placeholder="Altura">
+    <input type="number" name="txtLargura" id="txtLargura" placeholder="Largura">
+    <input type="button" value="calcular" onclick="perimetro()">
+    
+    <p><strong>Resposta: </strong><span id="resultado"></span></p>
+
+    <script>
+        function perimetro(){
+        let altura = Number(document.getElementById('txtAltura').value)
+        let largura = Number(document.getElementById('txtLargura').value)
+        let P = 2 * (altura + largura)
+        
+        document.getElementById('resultado').textContent = `Perímetro = ${P}`
+    }
+    </script>
+</body>
+</html>

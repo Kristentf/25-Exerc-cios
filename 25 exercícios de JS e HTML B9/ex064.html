@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex015</title>
+</head>
+<body>
+    
+    <h1>64) Criar um programa que armazena o nome do aluno em uma variável e o ano atual em
+        outra. Em seguida, exibir a seguinte mensagem: "Olá, [Nome do Aluno], estamos no ano
+        de 2024".</h1>
+
+    <input type="text" name="txtNome" id="txtNome" placeholder="Digite nome">    
+    <input type="button" value="enviar" onclick="msg()">
+
+    <p><strong>Resposta: </strong><span id="Resposta"></span></p>
+    <script>
+        function msg(){
+            let nome = document.getElementById('txtNome').value
+            document.body.innerHTML += `Olá ${nome}, estamos no ano de 2024`
+        }
+    </script>
+</body>
+</html>

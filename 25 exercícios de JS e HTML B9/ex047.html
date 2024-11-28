@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex010</title>
+</head>
+<body>
+    
+    <h1>47) Escreva um programa que solicita ao usuário dois números inteiros e, em seguida, exibe
+        a soma desses dois números.
+        </h1>
+    <input type="number" name="txtn1" id="txtn1" placeholder="Primeiro número">
+    <input type="number" name="txtn2" id="txtn2" placeholder="Segundo número"> 
+    <input type="button" value="somar" onclick="calcular()">
+
+    <p><strong>Resultado: </strong><span id="resultado"></span></p>
+
+    <script>
+        function calcular(){
+            let n1 = document.getElementById('txtn1').value
+            let n2 = document.getElementById('txtn2').value
+            let res = Number(n1) + Number(n2)
+
+            document.getElementById('resultado').textContent = res
+        }
+         
+    </script>
+</body>
+</html>

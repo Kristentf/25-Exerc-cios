@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex017</title>
+</head>
+<body>
+    
+    <h1>73) Desenvolva um programa que calcula o consumo médio de um veículo, solicitando ao
+usuário a distância total percorrida (em quilômetros) e o total de combustível gasto (em
+litros).</h1>
+    
+    <input type="number" name="txtDistancia" id="txtDistancia" placeholder="Distância percorrida (km)">
+    <input type="number" name="txtCombustivel" id="txtCombustivel" placeholder="Combustível gasto (L)">
+    <input type="button" value="calcular" onclick="calcular()">
+    <p><strong>Resposta: </strong><span id="resposta"></span></p>
+
+    <script>
+        function calcular(){
+            let distancia = Number(document.getElementById('txtDistancia').value)
+            let combustivel = Number(document.getElementById('txtCombustivel').value)
+            let consumo = combustivel / distancia
+
+            document.getElementById('resposta').textContent = `${consumo}litro por km`
+        }
+    </script>
+</body>
+</html>
